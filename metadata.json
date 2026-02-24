@@ -1,0 +1,7 @@
+{
+  "name": "Gusto - Premium Restaurant & Delivery System",
+  "description": "A full-stack restaurant management platform featuring a customer ordering app, real-time delivery tracking, and a comprehensive admin dashboard.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

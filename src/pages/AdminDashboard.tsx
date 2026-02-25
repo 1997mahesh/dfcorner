@@ -50,7 +50,7 @@ export default function AdminDashboard() {
               className={cn(
                 "w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
                 activeTab === item.id 
-                  ? "bg-emerald-900 text-white" 
+                  ? "bg-orange-900 text-white" 
                   : "text-slate-500 hover:bg-slate-50"
               )}
             >
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
               <p className="text-sm font-bold text-slate-800">Admin User</p>
               <p className="text-xs text-slate-500">Super Admin</p>
             </div>
-            <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
+            <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-700 font-bold">
               A
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function AdminDashboard() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
-                { label: 'Total Revenue', value: formatPrice(stats.totalSales), icon: <DollarSign className="text-emerald-600" />, trend: '+12.5%' },
+                { label: 'Total Revenue', value: formatPrice(stats.totalSales), icon: <DollarSign className="text-orange-600" />, trend: '+12.5%' },
                 { label: 'Total Orders', value: stats.totalOrders, icon: <Package className="text-blue-600" />, trend: '+8.2%' },
                 { label: 'Active Customers', value: stats.totalUsers, icon: <Users className="text-purple-600" />, trend: '+5.1%' },
                 { label: 'Avg Order Value', value: formatPrice(stats.totalSales / (stats.totalOrders || 1)), icon: <TrendingUp className="text-amber-600" />, trend: '+2.4%' }
@@ -91,7 +91,7 @@ export default function AdminDashboard() {
                     <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center">
                       {stat.icon}
                     </div>
-                    <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg">{stat.trend}</span>
+                    <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-lg">{stat.trend}</span>
                   </div>
                   <p className="text-slate-500 text-xs font-medium uppercase tracking-wider mb-1">{stat.label}</p>
                   <h3 className="text-2xl font-bold text-slate-800">{stat.value}</h3>
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
                       <Tooltip 
                         contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
                       />
-                      <Line type="monotone" dataKey="sales" stroke="#059669" strokeWidth={3} dot={{ r: 4, fill: '#059669' }} activeDot={{ r: 6 }} />
+                      <Line type="monotone" dataKey="sales" stroke="#ea580c" strokeWidth={3} dot={{ r: 4, fill: '#ea580c' }} activeDot={{ r: 6 }} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>

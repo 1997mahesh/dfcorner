@@ -72,16 +72,20 @@ db.exec(`
 const userCount = db.prepare("SELECT COUNT(*) as count FROM users").get() as { count: number };
 if (userCount.count === 0) {
   const hashedPassword = bcrypt.hashSync("admin123", 10);
-  db.prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)").run("Admin User", "admin@gusto.com", hashedPassword, "admin");
+  db.prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)").run("Admin User", "admin@dubeyji.com", hashedPassword, "admin");
   
-  const categories = ["Starters", "Main Course", "Desserts", "Beverages"];
+  const categories = ["Parathas & Kababs", "Rolls", "North Indian", "South Indian", "Chinese", "Beverages"];
   categories.forEach(cat => db.prepare("INSERT INTO categories (name) VALUES (?)").run(cat));
   
   const items = [
-    { cat: 1, name: "Bruschetta", price: 8.99, desc: "Toasted bread with tomatoes and basil" },
-    { cat: 2, name: "Truffle Pasta", price: 18.50, desc: "Creamy pasta with black truffle oil" },
-    { cat: 3, name: "Tiramisu", price: 7.50, desc: "Classic Italian dessert" },
-    { cat: 4, name: "Espresso", price: 3.50, desc: "Strong Italian coffee" }
+    { cat: 1, name: "Veg Keema Kabab Paratha", price: 120, desc: "Our signature dish - Flavourful veg keema served with soft parathas." },
+    { cat: 1, name: "Paneer Paratha", price: 90, desc: "Stuffed with fresh spiced paneer, served with chutney." },
+    { cat: 2, name: "Veg Kathi Roll", price: 80, desc: "Classic kathi roll with spiced vegetable filling." },
+    { cat: 2, name: "Veg Keema Roll", price: 100, desc: "Signature veg keema wrapped in a soft roll." },
+    { cat: 3, name: "Paneer Butter Masala", price: 180, desc: "Rich and creamy paneer gravy." },
+    { cat: 4, name: "Masala Dosa", price: 70, desc: "Crispy dosa with spiced potato filling." },
+    { cat: 5, name: "Veg Manchurian", price: 110, desc: "Indo-Chinese style vegetable balls in spicy gravy." },
+    { cat: 6, name: "Special Masala Chai", price: 20, desc: "Authentic Indian spiced tea." }
   ];
   items.forEach(item => {
     db.prepare("INSERT INTO menu_items (category_id, name, price, description) VALUES (?, ?, ?, ?)").run(item.cat, item.name, item.price, item.desc);

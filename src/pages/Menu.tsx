@@ -66,8 +66,8 @@ export default function Menu() {
                 className={cn(
                   "px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all",
                   selectedCategory === cat.name 
-                    ? "bg-emerald-900 text-white shadow-lg" 
-                    : "bg-white text-emerald-900 border border-emerald-900/10 hover:bg-emerald-50"
+                    ? "bg-orange-900 text-white shadow-lg" 
+                    : "bg-white text-orange-900 border border-orange-900/10 hover:bg-orange-50"
                 )}
               >
                 {cat.name}
@@ -81,9 +81,9 @@ export default function Menu() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {[...Array(8)].map((_, i) => (
             <div key={i} className="animate-pulse space-y-4">
-              <div className="aspect-square bg-emerald-100 rounded-3xl" />
-              <div className="h-4 bg-emerald-100 rounded w-3/4" />
-              <div className="h-4 bg-emerald-100 rounded w-1/2" />
+              <div className="aspect-square bg-orange-100 rounded-3xl" />
+              <div className="h-4 bg-orange-100 rounded w-3/4" />
+              <div className="h-4 bg-orange-100 rounded w-1/2" />
             </div>
           ))}
         </div>
@@ -95,7 +95,7 @@ export default function Menu() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              className="group bg-white rounded-[2rem] p-4 border border-emerald-900/5 hover:shadow-xl hover:shadow-emerald-900/5 transition-all"
+              className="group bg-white rounded-[2rem] p-4 border border-orange-900/5 hover:shadow-xl hover:shadow-orange-900/5 transition-all"
             >
               <div className="relative aspect-square rounded-2xl overflow-hidden mb-4">
                 <img 
@@ -103,7 +103,7 @@ export default function Menu() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt={item.name}
                 />
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg text-[10px] font-bold text-emerald-900 uppercase tracking-wider">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg text-[10px] font-bold text-orange-900 uppercase tracking-wider">
                   {item.category_name}
                 </div>
               </div>
@@ -111,20 +111,20 @@ export default function Menu() {
               <div className="px-2">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-serif font-bold text-lg">{item.name}</h3>
-                  <span className="text-emerald-600 font-bold">{formatPrice(item.price)}</span>
+                  <span className="text-orange-600 font-bold">₹{item.price}</span>
                 </div>
-                <p className="text-emerald-900/50 text-xs line-clamp-2 mb-4 h-8">
+                <p className="text-orange-900/50 text-xs line-clamp-2 mb-4 h-8">
                   {item.description}
                 </p>
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-1 text-amber-400">
                     <Star size={12} fill="currentColor" />
-                    <span className="text-[10px] font-bold text-emerald-900/40">4.9</span>
+                    <span className="text-[10px] font-bold text-orange-900/40">4.6</span>
                   </div>
                   <button 
                     onClick={() => addItem({ ...item, quantity: 1 })}
-                    className="p-2 bg-emerald-900 text-white rounded-xl hover:bg-emerald-800 transition-all active:scale-95"
+                    className="p-2 bg-orange-900 text-white rounded-xl hover:bg-orange-800 transition-all active:scale-95"
                   >
                     <Plus size={18} />
                   </button>

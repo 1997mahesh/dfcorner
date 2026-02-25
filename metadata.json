@@ -1,6 +1,6 @@
 {
-  "name": "Gusto - Premium Restaurant & Delivery System",
-  "description": "A full-stack restaurant management platform featuring a customer ordering app, real-time delivery tracking, and a comprehensive admin dashboard.",
+  "name": "Dubey ji Food Corner",
+  "description": "Authentic flavours from Prayagraj. Serving the best Veg Keema, Kabab Parathas, and Rolls in Kharadi, Pune.",
   "requestFramePermissions": [
     "geolocation"
   ]

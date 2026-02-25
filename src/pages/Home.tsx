@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center px-6">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2070" 
+            src="https://images.unsplash.com/photo-1589187151003-0dd55769239b?auto=format&fit=crop&q=80&w=2070" 
             className="w-full h-full object-cover brightness-[0.4]"
             alt="Hero background"
           />
@@ -22,22 +22,22 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
-              Premium Dining Experience
+            <span className="inline-block px-4 py-1.5 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
+              Flavours From Prayagraj
             </span>
             <h1 className="text-6xl md:text-8xl font-serif font-bold text-white leading-[0.9] mb-8">
-              Artistry in <br /> Every <span className="italic text-emerald-400">Bite.</span>
+              Dubey ji <br /> Food <span className="italic text-orange-400">Corner.</span>
             </h1>
             <p className="text-xl text-white/70 mb-10 leading-relaxed font-light">
-              Experience the finest culinary creations delivered straight to your doorstep. Fresh ingredients, masterful techniques, and unparalleled taste.
+              Authentic Veg Keema, Kabab Parathas, and Rolls. Experience the true taste of North India in the heart of Kharadi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/menu" className="btn-primary flex items-center justify-center space-x-2">
-                <span>Explore Menu</span>
+              <Link to="/menu" className="btn-primary bg-orange-600 hover:bg-orange-700 flex items-center justify-center space-x-2">
+                <span>Order Online</span>
                 <ChevronRight size={18} />
               </Link>
-              <Link to="/about" className="btn-secondary bg-white/10 border-white/20 text-white hover:bg-white/20 flex items-center justify-center">
-                Our Story
+              <Link to="/menu" className="btn-secondary bg-white/10 border-white/20 text-white hover:bg-white/20 flex items-center justify-center">
+                Explore Menu
               </Link>
             </div>
           </motion.div>
@@ -49,9 +49,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { icon: <Utensils className="text-emerald-600" />, title: "Master Chefs", desc: "Our kitchen is led by world-class culinary experts with decades of experience." },
-              { icon: <ShieldCheck className="text-emerald-600" />, title: "Quality Assured", desc: "We source only the freshest, organic ingredients from local sustainable farms." },
-              { icon: <Truck className="text-emerald-600" />, title: "Swift Delivery", desc: "Your meal arrives hot and fresh with our optimized delivery network." }
+              { icon: <Utensils className="text-orange-600" />, title: "Pure Veg", desc: "We serve 100% vegetarian dishes prepared with the highest hygiene standards." },
+              { icon: <ShieldCheck className="text-orange-600" />, title: "Authentic Taste", desc: "Our recipes bring the traditional flavours of Prayagraj straight to your plate." },
+              { icon: <Truck className="text-orange-600" />, title: "Quick Service", desc: "Fast preparation and delivery for your busy workdays in EON IT Park." }
             ].map((feature, i) => (
               <motion.div 
                 key={i}
@@ -61,11 +61,11 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="space-y-4"
               >
-                <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-serif font-bold">{feature.title}</h3>
-                <p className="text-emerald-900/60 text-sm leading-relaxed">{feature.desc}</p>
+                <p className="text-orange-900/60 text-sm leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -77,10 +77,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">Chef's Recommendations</h2>
-              <p className="text-emerald-900/60 max-w-lg">Handpicked selections that represent the pinnacle of our culinary philosophy.</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold">Our Best Sellers</h2>
+              <p className="text-orange-900/60 max-w-lg">The dishes that made us a favorite in Kharadi.</p>
             </div>
-            <Link to="/menu" className="text-emerald-600 font-medium flex items-center space-x-2 hover:underline">
+            <Link to="/menu" className="text-orange-600 font-medium flex items-center space-x-2 hover:underline">
               <span>View Full Menu</span>
               <ChevronRight size={16} />
             </Link>
@@ -88,9 +88,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Truffle Infused Risotto", price: "$24.00", img: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&q=80&w=800" },
-              { name: "Pan-Seared Scallops", price: "$32.00", img: "https://images.unsplash.com/photo-1532639113876-a4a7b3ef99fa?auto=format&fit=crop&q=80&w=800" },
-              { name: "Wagyu Beef Burger", price: "$28.00", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800" }
+              { name: "Veg Keema Kabab Paratha", price: "₹120", img: "https://images.unsplash.com/photo-1626132646529-5003375a9b12?auto=format&fit=crop&q=80&w=800" },
+              { name: "Veg Kathi Roll", price: "₹80", img: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=800" },
+              { name: "Paneer Paratha", price: "₹90", img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800" }
             ].map((dish, i) => (
               <motion.div 
                 key={i}
@@ -106,14 +106,14 @@ export default function Home() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     alt={dish.name}
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-emerald-900">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-orange-900">
                     {dish.price}
                   </div>
                 </div>
-                <h4 className="text-xl font-serif font-bold mb-2 group-hover:text-emerald-600 transition-colors">{dish.name}</h4>
+                <h4 className="text-xl font-serif font-bold mb-2 group-hover:text-orange-600 transition-colors">{dish.name}</h4>
                 <div className="flex items-center space-x-1 text-amber-400">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                  <span className="text-xs text-emerald-900/40 ml-2">(120+ reviews)</span>
+                  <span className="text-xs text-orange-900/40 ml-2">(4.6 Rating)</span>
                 </div>
               </motion.div>
             ))}
